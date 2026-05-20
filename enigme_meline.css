@@ -1,0 +1,180 @@
+@@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    background-color: #010114 !important; /* Le !important force la priorité */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+.paragraphe {
+	box-sizing: border-box;
+	background-color : #1a1a2e;
+	border : 1px solid white;
+	border-radius : 20px;
+	width : 90%;
+	max-width : 700px;
+	margin-right : auto;
+	margin-left : auto;
+	margin-bottom : 25px;
+	padding : 20px
+	
+}
+
+h1 {
+    background-color: #1a1a2e;
+    border: 2px solid #00f0ff;
+    border-radius: 5px;
+    color: #00f0ff;
+    
+    /* --- LA SOLUTION --- */
+    width: fit-content;      /* La boîte s'adapte à la taille du texte */
+    margin: 0 auto 4% auto;  /* Le "auto" à gauche et à droite le centre */
+    padding: 5px 20px;       /* Ajoute un peu d'air entre le texte et la bordure */
+    
+    /* --- CORRECTION --- */
+    font-weight: bold;       /* "8px" n'est pas une valeur valide pour font-weight */
+    text-align: center;
+}
+
+p {
+    /* Au lieu d'un noir pur, on utilise un dégradé très sombre */
+    background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+    color: #e0f7fa;
+    margin: 0 5px;
+    padding: 20px;
+	font-size : 20px;
+	text-align: justify;       /* Justifie le texte */
+    text-justify: inter-word; /* Améliore la répartition des espaces */
+	line-height: 1.6;         /* Augmente l'espace entre les lignes */
+    border-radius: 10px;
+    padding-bottom : 6%;
+    /* Double ombre interne pour la profondeur */
+    box-shadow: 
+        inset 3px 3px 7px rgba(0, 0, 0, 0.8),    /* Ombre principale haut/gauche */
+        inset -2px -2px 5px rgba(255, 255, 255, 0.05); /* Très légère lumière bas/droite (rebord) */
+    
+    /* On peut aussi ajouter une bordure très fine et sombre */
+    border: 1px solid #000;
+	margin-bottom : 4%;
+}
+
+.reponse {
+    /* --- Taille flexible pour Smartphone --- */
+    width: 25%;            /* S'adapte à la largeur du parent */
+    min-width: 5rem;       /* Sécurité pour ne pas être trop petit */
+    height: 2.8rem;
+    box-sizing: border-box !important;
+    
+    /* --- Couleurs Sobres --- */
+    background-color: rgba(15, 15, 25, 0.8) !important; /* Presque noir, très léger bleu */
+    color: #f0f0f0 !important; /* Blanc cassé, moins agressif que le cyan */
+    
+    /* --- Bordure "Ligne de Code" --- */
+    border: none !important;
+    border-bottom: 2px solid #4a4a6a !important; /* Ligne fine en bas, grise/violette */
+    border-radius: 0; /* Angles droits pour le côté sérieux/sobre */
+    
+    /* --- Typographie --- */
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    font-size: 1rem !important;
+    text-align: center;
+    
+    /* --- Effets --- */
+    transition: all 0.3s ease;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+/* --- État Actif (Focus) --- */
+.reponse:focus {
+    outline: none !important;
+    background-color: rgba(30, 30, 50, 0.9) !important;
+    border-bottom: 2px solid #8e24aa !important; /* Souligné violet Solo Leveling au clic */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+.valider {
+    /* --- Base (avec un violet moins violent, plus sombre) --- */
+    color: #ffffff; /* 'dark' n'est pas une couleur valide, blanc est mieux */
+    font-size: 13px; /* Correction : font-size, pas font_size */
+    text-align: center;
+    border: 1px solid #2a0a4a; /* Une bordure violet très sombre, presque noire */
+    border-radius: 12px;
+    padding: 10px 20px; /* Ajout d'espace interne pour la profondeur */
+    cursor: pointer; /* Indique que c'est cliquable */
+    transition: all 0.3s ease; /* Pour des animations fluides */
+
+    /* --- EFFET DE PROFONDEUR ET GRADIENT --- */
+    
+    /* 1. Le Dégradé Solo Leveling (Violet sombre vers un centre plus clair) */
+    background: radial-gradient(circle at center, #6a1b9a 0%, #310a5e 100%);
+    /* Tu peux aussi tester un dégradé linéaire plus simple :
+       background: linear-gradient(180deg, #6a1b9a 0%, #310a5e 100%); */
+
+    /* 2. L'Ombre de Surface (Fait ressortir le bouton) */
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.4),          /* Ombre portée externe (le soulève) */
+        inset 0 1px 1px rgba(255, 255, 255, 0.1); /* Liseré lumineux interne en haut (le bombe) */
+}
+
+/* --- EFFET AU SURVOL (Pour le faire "réagir") --- */
+.valider:hover {
+    /* Le dégradé devient légèrement plus lumineux et électrique au survol */
+    background: radial-gradient(circle at center, #8e24aa 0%, #4a148c 100%);
+    box-shadow: 
+        0 6px 12px rgba(106, 27, 154, 0.5),    /* Ombre portée plus large et teintée */
+        inset 0 1px 2px rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px); /* Le bouton se soulève physiquement */
+}
+
+.image {
+    display: block;       /* Force l'image à se comporter comme un bloc seul */
+    margin: 1.5rem auto;  /* Centrage horizontal + espace en haut et en bas */
+    max-width: 90%;      /* L'image ne dépassera jamais de l'écran du téléphone */
+    height: auto;         /* Garde les proportions de l'image (pas de déformation) */
+    border-radius: 8px;   /* Un petit arrondi pour le style "pro" */
+    border: 1px solid #3d3d5c; /* Un léger contour pour la faire ressortir du fond */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Ombre pour la profondeur */
+}
+
+.math-box {
+    display: block;       /* Force l'élément à prendre toute la ligne */
+    width: fit-content;   /* Mais le cadre reste ajusté à la taille des maths */
+    margin: 1.5rem auto;  /* Crée un saut de ligne automatique + centre le carré */
+    
+    /* Le reste de ton style ne change pas */
+    background-color: #0f0f1a;
+    border: 1px solid #444;
+    border-left: 3px solid #8e24aa;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.integral {
+    font-size: 1.5rem; /* On agrandit le signe intégrale */
+    vertical-align: middle;
+    font-style: normal;
+}
+
+.indices {
+    display: inline-flex;
+    flex-direction: column; /* Aligne le haut et le bas verticalement */
+    vertical-align: middle;
+    font-size: 0.7rem; /* Plus petit pour les bornes */
+    line-height: 1;
+    margin-right: 5px;
+}
+
+.indices sup { vertical-align: bottom; }
+.indices sub { vertical-align: top; }
