@@ -178,3 +178,12 @@ p {
 
 .indices sup { vertical-align: bottom; }
 .indices sub { vertical-align: top; }
+
+[id^="zone-anecdote"] {
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

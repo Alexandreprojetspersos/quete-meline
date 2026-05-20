@@ -35,10 +35,10 @@
 			LYECCYVO
 			</span>
 			</p>
-			<input class = "reponse">
-			<button class="valider" type="button">Valider</button>
+			<input class = "reponse" id='input1'>
+			<button class="valider" type="button" onclick="verifierEpreuve1()">Valider</button>
 		
-			<div id="zone-anecdote"></div>
+			<div id="zone-anecdote-1" class="anecdote-style"></div>
 		</div>
 		
 		<div class='paragraphe'>
@@ -46,8 +46,10 @@
 			<p>
 			Il est gravé dans l'argile mais est couché noir sur blanc. Sa signification est importante à mes yeux. 
 			</p>
-			<input class = "reponse">
-			<button class="valider" type="button">Valider</button>
+			<input class = "reponse" id='input2'>
+			<button class="valider" type="button" onclick="verifierEpreuve2()">Valider</button>
+			
+			<div id="zone-anecdote-2" class="anecdote-style"></div>
 		</div>
 		
 		<div class='paragraphe'>
@@ -58,8 +60,10 @@
 				2 ( 1 - <span class="integral">∫</span><span class="indices"><sup>π/5</sup><sub>0</sub></span> sin(x) dx )
 			</span>
 			</p>
-			<input class = "reponse">
-			<button class="valider" type="button">Valider</button>
+			<input class = "reponse" id='input3'>
+			<button class="valider" type="button" onclick="verifierEpreuve3()">Valider</button>
+			
+			<div id="zone-anecdote-3" class="anecdote-style"></div>
 		</div>
 		
 		<div class='paragraphe'>
@@ -74,8 +78,10 @@
 		
 			Quel est ton choix : traverser ou rester ? 
 			</p>
-			<input class="reponse">
-			<button class="valider" type="button">Valider</button>
+			<input class="reponse" id='input4'>
+			<button class="valider" type="button" onclick="verifierEpreuve4()">Valider</button>
+			
+			<div id="zone-anecdote-4" class="anecdote-style"></div>
 		</div>
 		
 		<div class='paragraphe'>
@@ -83,8 +89,10 @@
 			<p>
 			Un petit morceau de musique, son titre est la clé (aborde ça avec le sourire). 
 			</p>
-			<input class = "reponse">
-			<button class="valider" type="button">Valider</button>
+			<input class = "reponse" id='input5'>
+			<button class="valider" type="button" onclick="verifierEpreuve5()">Valider</button>
+			
+			<div id="zone-anecdote-5" class="anecdote-style"></div>
 		</div>
 		
 		<div class='paragraphe'>
@@ -93,22 +101,28 @@
 			Lorsque tu auras trouvé tous les mots, notes les lettres restantantes pour reconstituer le mot mystère. Les lettres n'ont qu'une occurence dans le mot cherché sauf la lettre N qui en a deux.
 			<img src="enigme6.png" class = "image" /> 
 			</p>
-			<input class = "reponse">	
-			<button class="valider" type="button">Valider</button>
+			<input class = "reponse" id='input6'>	
+			<button class="valider" type="button" onclick="verifierEpreuve6()">Valider</button>
+			
+			<div id="zone-anecdote-6" class="anecdote-style"></div>
 		</div>
 		
 		<div class='paragraphe'>
 			<h1>Epreuve numéro 7 </h1>
 			<img src="enigme7.png" class = "image"/>
-			<input class = "reponse">
-			<button class="valider" type="button">Valider</button>
+			<input class = "reponse" id='input7'>
+			<button class="valider" type="button" onclick="verifierEpreuve7()">Valider</button>
+			
+			<div id="zone-anecdote-7" class="anecdote-style"></div>
 		</div>
 		
 		<div class='paragraphe'>
 			<h1>Entrer les différents codes</h1>
-			<input class = "reponse">
-			<button class="valider" type="button">Valider</button>
+			<input class = "reponse" id='input8'>
+			<button class="valider" type="button" onclick="verifierEpreuveFinale()">Valider</button>
+			
+			<div id="zone-anecdote-8" class="anecdote-style"></div>
 		</div>
-		
+		<script src="enigme_meline.js"></script>
 	</body>
 </HTML>
